@@ -12,7 +12,7 @@
   :root{
     --paper:#ffffff;--panel:#f4f4f3;--ink:#0f0f0f;--ink-2:#2b2b2b;
     --muted:#6d6d6d;--faint:#9b9b9b;--line:#e7e7e5;--line-2:#d5d5d2;
-    --accent:#f0533b;--accent-dk:#d8442e;
+    --accent:#0f766e;--accent-dk:#0b5c55;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
@@ -59,7 +59,7 @@
   .hero-aside .k{font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--faint);font-weight:600;margin-bottom:6px}
   .hero-aside .v{font-size:1rem;color:var(--ink-2);line-height:1.45}
   .visual{position:relative;height:58vh;min-height:380px;overflow:hidden;background:linear-gradient(120deg,#eee,#e0e0e0 50%,#d2d2d2)}
-  .visual img{width:100%;height:100%;object-fit:cover}
+  .visual img{width:100%;height:100%;object-fit:cover;object-position:center}
   .visual .cap{position:absolute;left:0;right:0;bottom:0;background:linear-gradient(0deg,rgba(0,0,0,.45),transparent)}
   .visual .cap .wrap{display:flex;justify-content:space-between;padding-top:16px;padding-bottom:16px}
   .visual .cap .lbl{color:#fff}
@@ -71,16 +71,10 @@
   section.block{padding:110px 0}
   .sec-head{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid var(--line);padding-bottom:22px;margin-bottom:8px}
   .sec-head h2{font-size:clamp(2rem,4.6vw,3.6rem);font-weight:700}
-  .sec-head .num{font-family:'Bricolage Grotesque',sans-serif;font-weight:300;font-size:2rem;color:var(--accent)}
-  .treat a.row{display:grid;grid-template-columns:70px 1fr 1.1fr 40px;gap:26px;align-items:center;padding:30px 0;border-bottom:1px solid var(--line);transition:.28s}
-  .treat a.row:hover{padding-left:18px;padding-right:18px;background:var(--panel)}
-  .treat a.row:hover .n{color:var(--accent)}
-  .treat .n{font-family:'Bricolage Grotesque',sans-serif;font-weight:300;font-size:1.5rem;color:var(--faint);transition:color .28s}
+  .treat .row{display:grid;grid-template-columns:70px 1fr 1.1fr;gap:26px;align-items:center;padding:30px 0;border-bottom:1px solid var(--line)}
+  .treat .n{font-family:'Bricolage Grotesque',sans-serif;font-weight:300;font-size:1.5rem;color:var(--accent)}
   .treat .t{font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:2.1rem;letter-spacing:-.02em;line-height:1}
   .treat .d{color:var(--muted);font-size:1rem;max-width:46ch}
-  .treat a.row:hover .ar{color:var(--accent);opacity:1;transform:translateX(0)}
-  .treat .ar{justify-self:end;opacity:0;transform:translateX(-8px);transition:.28s}
-  .treat .ar svg{width:24px;height:24px}
   .statement{background:var(--ink);color:#fff;padding:130px 0}
   .statement .wrap{max-width:1080px}
   .statement p{font-family:'Bricolage Grotesque',sans-serif;font-weight:400;font-size:clamp(2rem,5.2vw,4.2rem);line-height:1.08;letter-spacing:-.02em}
@@ -88,8 +82,8 @@
   .statement .attr{margin-top:38px;color:#9b9b9b;font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600}
   .about{background:var(--panel)}
   .about .wrap{display:grid;grid-template-columns:.9fr 1.25fr;gap:66px;align-items:center}
-  .about .ph{aspect-ratio:4/5;border-radius:4px;position:relative;overflow:hidden;background:linear-gradient(160deg,#e6e6e6,#cfcfcf)}
-  .about .ph img{width:100%;height:100%;object-fit:cover}
+  .about .ph{aspect-ratio:1/1;border-radius:4px;position:relative;overflow:hidden;background:linear-gradient(160deg,#e6e6e6,#cfcfcf)}
+  .about .ph img{width:100%;height:100%;object-fit:cover;object-position:center}
   .about .ph .tag{position:absolute;left:16px;bottom:14px;background:rgba(255,255,255,.85);padding:6px 12px;border-radius:100px}
   .about h2{font-size:clamp(2rem,4vw,3.1rem);font-weight:700;margin:14px 0 24px;line-height:1.02;letter-spacing:-.02em}
   .about p{color:var(--ink-2);margin-bottom:18px;font-size:1.07rem;max-width:52ch}
@@ -112,9 +106,8 @@
     .nav-links .nav-cta{margin-top:14px;border:0;color:#fff;width:auto}
     .hero-row,.about .wrap,.contact .wrap{grid-template-columns:1fr;gap:30px}
     .hero-aside{justify-self:start;max-width:none}
-    .treat a.row{grid-template-columns:44px 1fr;gap:8px 16px}
+    .treat .row{grid-template-columns:44px 1fr;gap:8px 16px}
     .treat .d{grid-column:2}
-    .treat .ar{display:none}
     section.block{padding:72px 0}
   }
 </style>
@@ -174,13 +167,13 @@
 </div>
 <section class="block treat" id="leistungen">
   <div class="wrap">
-    <div class="sec-head"><h2 class="dp">Behandlungsspektrum</h2><span class="num dp">01</span></div>
-    <a class="row rv" href="#kontakt"><span class="n">01</span><span class="t">Depression & Burn-out</span><span class="d">Begleitung aus anhaltender Niedergeschlagenheit, Antriebslosigkeit und Erschöpfung.</span><span class="ar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M9 7h8v8"/></svg></span></a>
-    <a class="row rv" href="#kontakt"><span class="n">02</span><span class="t">Ängste & Panik</span><span class="d">Ängste, Panikattacken und Zwänge verstehen und Sicherheit zurückgewinnen.</span><span class="ar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M9 7h8v8"/></svg></span></a>
-    <a class="row rv" href="#kontakt"><span class="n">03</span><span class="t">Psychosomatik</span><span class="d">Körperliche Beschwerden, die eng mit der Seele verbunden sind — ärztlich fundiert.</span><span class="ar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M9 7h8v8"/></svg></span></a>
-    <a class="row rv" href="#kontakt"><span class="n">04</span><span class="t">Chronische Schmerzen</span><span class="d">Migräne, Kopfschmerzen, Nackenverspannungen, Tinnitus und weitere Schmerzsyndrome.</span><span class="ar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M9 7h8v8"/></svg></span></a>
-    <a class="row rv" href="#kontakt"><span class="n">05</span><span class="t">Krisen & Trauer</span><span class="d">Halt in persönlichen Krisen, bei Trauerreaktionen und in der Krankheitsverarbeitung.</span><span class="ar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M9 7h8v8"/></svg></span></a>
-    <a class="row rv" href="#kontakt"><span class="n">06</span><span class="t">Weitere Beschwerden</span><span class="d">Essstörungen, Schlafstörungen sowie die Begleitung bei Krebserkrankungen.</span><span class="ar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M9 7h8v8"/></svg></span></a>
+    <div class="sec-head"><h2 class="dp">Behandlungsspektrum</h2></div>
+    <div class="row rv"><span class="n">01</span><span class="t">Depression & Burn-out</span><span class="d">Begleitung aus anhaltender Niedergeschlagenheit, Antriebslosigkeit und Erschöpfung.</span></div>
+    <div class="row rv"><span class="n">02</span><span class="t">Ängste & Panik</span><span class="d">Ängste, Panikattacken und Zwänge verstehen und Sicherheit zurückgewinnen.</span></div>
+    <div class="row rv"><span class="n">03</span><span class="t">Psychosomatik</span><span class="d">Körperliche Beschwerden, die eng mit der Seele verbunden sind — ärztlich fundiert.</span></div>
+    <div class="row rv"><span class="n">04</span><span class="t">Chronische Schmerzen</span><span class="d">Migräne, Kopfschmerzen, Nackenverspannungen, Tinnitus und weitere Schmerzsyndrome.</span></div>
+    <div class="row rv"><span class="n">05</span><span class="t">Krisen & Trauer</span><span class="d">Halt in persönlichen Krisen, bei Trauerreaktionen und in der Krankheitsverarbeitung.</span></div>
+    <div class="row rv"><span class="n">06</span><span class="t">Weitere Beschwerden</span><span class="d">Essstörungen, Schlafstörungen sowie die Begleitung bei Krebserkrankungen.</span></div>
   </div>
 </section>
 <section class="statement">
@@ -193,7 +186,7 @@
   <div class="wrap">
     <div class="ph rv"><img src="cache_2417833534.jpg" alt="Anja Rösick-Schulte" onerror="this.style.display='none'"><span class="tag lbl">Anja Rösick-Schulte · Ärztin</span></div>
     <div class="rv">
-      <span class="lbl"><span class="ac">02</span> — Über mich</span>
+      <span class="lbl">Über mich</span>
       <h2 class="dp">Professionelle Hilfe in persönlicher Atmosphäre.</h2>
       <p>Ich möchte Sie in einer freundlichen, geschützten Atmosphäre empfangen, die zu Ihrem Wohlbefinden beiträgt — damit Sie befreit über das sprechen können, was Ihnen wichtig ist.</p>
       <p>Als Ärztin biete ich Ihnen auf Grundlage langjähriger Erfahrung in der Allgemeinmedizin professionell fundierte Hilfe und ordne Ihre körperlichen Beschwerden gemeinsam mit Ihnen ein.</p>
@@ -204,7 +197,7 @@
 <section class="block contact" id="kontakt">
   <div class="wrap">
     <div class="rv">
-      <span class="lbl"><span class="ac">03</span> — Kontakt</span>
+      <span class="lbl">Kontakt</span>
       <h2 class="dp"><span class="thin">Sprechen</span><br>wir.</h2>
     </div>
     <div class="cinfo rv">
