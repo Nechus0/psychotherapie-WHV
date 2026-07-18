@@ -10,9 +10,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --paper:#ffffff;--panel:#f4f4f3;--ink:#0f0f0f;--ink-2:#2b2b2b;
-    --muted:#6d6d6d;--faint:#9b9b9b;--line:#e7e7e5;--line-2:#d5d5d2;
-    --accent:#0f766e;--accent-dk:#0b5c55;
+    --paper:#ffffff;--panel:#f5f3f0;--ink:#0f0f0f;--ink-2:#2b2b2b;
+    --muted:#6d6a63;--faint:#6f6a60;--line:#e7e4de;--line-2:#d5d1c8;
+    --accent:#8b8378;--accent-dk:#726b60;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
@@ -38,12 +38,12 @@
   .burger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:6px}
   .burger span{width:24px;height:2px;background:var(--ink);transition:.3s}
   .pad{padding:0 44px}
-  .hero{padding:66px 0 84px;position:relative}
+  .hero{padding:60px 0 46px;position:relative}
   .hero-top{display:flex;justify-content:space-between;border-top:2px solid var(--ink);padding-top:14px}
-  .hero h1{font-size:clamp(3rem,10.5vw,9.5rem);margin:28px 0 0}
+  .hero h1{font-size:clamp(3rem,10vw,9rem);margin:26px 0 0}
   .hero h1 .thin{font-weight:300;color:var(--ink-2)}
-  .hero h1 .bold{font-weight:800}
-  .hero-row{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:end;margin-top:46px}
+  .hero h1 .bold{font-weight:700}
+  .hero-row{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:end;margin-top:40px}
   .hero-lead{font-size:1.3rem;line-height:1.5;color:var(--ink-2);max-width:40ch}
   .cta-row{display:flex;align-items:center;gap:14px;margin-top:30px;flex-wrap:wrap}
   .btn{display:inline-flex;align-items:center;gap:10px;font-size:.8rem;font-weight:600;padding:15px 26px;border-radius:100px;transition:.2s}
@@ -58,34 +58,34 @@
   .hero-aside .fact:first-of-type{border-top:none}
   .hero-aside .k{font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--faint);font-weight:600;margin-bottom:6px}
   .hero-aside .v{font-size:1rem;color:var(--ink-2);line-height:1.45}
-  .visual{position:relative;height:58vh;min-height:380px;overflow:hidden;background:linear-gradient(120deg,#eee,#e0e0e0 50%,#d2d2d2)}
-  .visual img{width:100%;height:100%;object-fit:cover;object-position:center}
-  .visual .cap{position:absolute;left:0;right:0;bottom:0;background:linear-gradient(0deg,rgba(0,0,0,.45),transparent)}
-  .visual .cap .wrap{display:flex;justify-content:space-between;padding-top:16px;padding-bottom:16px}
-  .visual .cap .lbl{color:#fff}
-  .cluster{padding:64px 0;border-bottom:1px solid var(--line)}
+  .praxis{padding:6px 0 0}
+  .praxis-head{display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid var(--line);padding-top:16px}
+  .visual{margin-top:22px;position:relative;height:60vh;min-height:400px;overflow:hidden;background:linear-gradient(120deg,#eee,#e0e0e0 50%,#d2d2d2)}
+  .visual img{width:100%;height:100%;object-fit:cover;object-position:center 42%}
+  .cluster{padding:70px 0;border-bottom:1px solid var(--line)}
   .cluster .head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:26px}
   .cluster .tags{display:flex;flex-wrap:wrap;gap:12px}
   .chip{font-family:'Bricolage Grotesque',sans-serif;font-weight:500;font-size:1.35rem;letter-spacing:-.01em;border:1px solid var(--line-2);border-radius:100px;padding:9px 20px;transition:.2s;cursor:default}
-  .chip:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
-  section.block{padding:110px 0}
+  .chip:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
+  section.block{padding:96px 0}
   .sec-head{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid var(--line);padding-bottom:22px;margin-bottom:8px}
   .sec-head h2{font-size:clamp(2rem,4.6vw,3.6rem);font-weight:700}
   .treat .row{display:grid;grid-template-columns:70px 1fr 1.1fr;gap:26px;align-items:center;padding:30px 0;border-bottom:1px solid var(--line)}
   .treat .n{font-family:'Bricolage Grotesque',sans-serif;font-weight:300;font-size:1.5rem;color:var(--accent)}
   .treat .t{font-family:'Bricolage Grotesque',sans-serif;font-weight:600;font-size:2.1rem;letter-spacing:-.02em;line-height:1}
   .treat .d{color:var(--muted);font-size:1rem;max-width:46ch}
-  .statement{background:var(--ink);color:#fff;padding:130px 0}
+  .statement{background:var(--ink);color:#fff;padding:120px 0}
   .statement .wrap{max-width:1080px}
   .statement p{font-family:'Bricolage Grotesque',sans-serif;font-weight:400;font-size:clamp(2rem,5.2vw,4.2rem);line-height:1.08;letter-spacing:-.02em}
-  .statement p b{font-weight:700}
-  .statement .attr{margin-top:38px;color:#9b9b9b;font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600}
+  .statement p b{font-weight:700;color:#d8d2c7}
+  .statement .attr{margin-top:38px;color:#9b968c;font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600}
   .about{background:var(--panel)}
-  .about .wrap{display:grid;grid-template-columns:.9fr 1.25fr;gap:66px;align-items:center}
-  .about .ph{aspect-ratio:1/1;border-radius:4px;position:relative;overflow:hidden;background:linear-gradient(160deg,#e6e6e6,#cfcfcf)}
-  .about .ph img{width:100%;height:100%;object-fit:cover;object-position:center}
+  .about .wrap{display:grid;grid-template-columns:.85fr 1.3fr;gap:66px;align-items:start}
+  .about .ph{aspect-ratio:4/5;border-radius:4px;position:relative;overflow:hidden;background:var(--panel)}
+  .about .ph img{width:100%;height:100%;object-fit:cover;object-position:center 18%}
   .about .ph .tag{position:absolute;left:16px;bottom:14px;background:rgba(255,255,255,.85);padding:6px 12px;border-radius:100px}
-  .about h2{font-size:clamp(2rem,4vw,3.1rem);font-weight:700;margin:14px 0 24px;line-height:1.02;letter-spacing:-.02em}
+  .about .txt{padding-top:4px}
+  .about h2{font-size:clamp(2rem,4vw,3.1rem);font-weight:700;margin:12px 0 24px;line-height:1.02;letter-spacing:-.02em}
   .about p{color:var(--ink-2);margin-bottom:18px;font-size:1.07rem;max-width:52ch}
   .contact .wrap{display:grid;grid-template-columns:1.1fr 1fr;gap:64px;align-items:end}
   .contact h2{font-size:clamp(3rem,9vw,7.5rem);font-weight:800;line-height:.9;letter-spacing:-.03em}
@@ -94,7 +94,7 @@
   .cinfo .k{font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--faint);font-weight:600;margin-bottom:5px}
   .cinfo .v{font-size:1.12rem}
   .cinfo .v.q{color:var(--muted);font-size:.94rem}
-  .cinfo a.v:hover{color:var(--accent)}
+  .cinfo a.v:hover{color:var(--accent-dk)}
   footer{border-top:1px solid var(--line);padding:30px 0}
   footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
   @media(max-width:880px){
@@ -106,9 +106,11 @@
     .nav-links .nav-cta{margin-top:14px;border:0;color:#fff;width:auto}
     .hero-row,.about .wrap,.contact .wrap{grid-template-columns:1fr;gap:30px}
     .hero-aside{justify-self:start;max-width:none}
+    .about .ph{max-width:360px}
     .treat .row{grid-template-columns:44px 1fr;gap:8px 16px}
     .treat .d{grid-column:2}
-    section.block{padding:72px 0}
+    section.block{padding:64px 0}
+    .visual{height:44vh}
   }
 </style>
 </head>
@@ -136,14 +138,14 @@
     </div>
     <h1 class="dp"><span class="thin">Raum für das,</span><br><span class="bold">was Sie bewegt.</span></h1>
     <div class="hero-row">
-      <div class="rv">
+      <div>
         <p class="hero-lead">Als Psychotherapeutin gehe ich individuell auf Ihre Sorgen ein und finde gemeinsam mit Ihnen eine Lösung — auf dem Weg aus Krisen und schweren Lebenssituationen.</p>
         <div class="cta-row">
           <a href="#kontakt" class="btn btn-solid">Termin vereinbaren <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
           <a href="tel:+494421773288" class="btn btn-line">04421 773288</a>
         </div>
       </div>
-      <aside class="hero-aside rv">
+      <aside class="hero-aside">
         <span class="rule"></span>
         <div class="fact"><div class="k">Sprechzeiten</div><div class="v">Mo – Do, telefonische Terminvergabe</div></div>
         <div class="fact"><div class="k">Praxis</div><div class="v">An der Wurt 19 · Wilhelmshaven</div></div>
@@ -151,12 +153,17 @@
     </div>
   </div>
 </section>
-<div class="visual">
-  <img src="Gemini_Generated_Image_1r6hp41r6hp41r6h.png" alt="Praxisräume" onerror="this.style.display='none'">
-  <div class="cap">
-    <div class="wrap"><span class="lbl">Praxisräume — An der Wurt 19</span><span class="lbl">Wilhelmshaven</span></div>
+<section class="praxis">
+  <div class="wrap">
+    <div class="praxis-head">
+      <span class="lbl">Die Praxis</span>
+      <span class="lbl">An der Wurt 19 · Wilhelmshaven</span>
+    </div>
   </div>
-</div>
+  <div class="visual">
+    <img src="Gemini_Generated_Image_1r6hp41r6hp41r6h.png" alt="Praxisräume — ruhiger, freundlicher Raum mit Blick in den Garten" onerror="this.style.display='none'">
+  </div>
+</section>
 <div class="cluster">
   <div class="wrap">
     <div class="head"><span class="lbl">Schwerpunkte</span><span class="lbl">12 Bereiche</span></div>
@@ -178,14 +185,14 @@
 </section>
 <section class="statement">
   <div class="wrap rv">
-    <p class="dp">Körper und Seele sind ein <b class="ac">untrennbares Ganzes</b> — und beeinflussen sich stets wechselseitig.</p>
+    <p class="dp">Körper und Seele sind ein <b>untrennbares Ganzes</b> — und beeinflussen sich stets wechselseitig.</p>
     <div class="attr">Der Ansatz meiner Praxis</div>
   </div>
 </section>
 <section class="block about" id="ueber">
   <div class="wrap">
     <div class="ph rv"><img src="cache_2417833534.jpg" alt="Anja Rösick-Schulte" onerror="this.style.display='none'"><span class="tag lbl">Anja Rösick-Schulte · Ärztin</span></div>
-    <div class="rv">
+    <div class="txt rv">
       <span class="lbl">Über mich</span>
       <h2 class="dp">Professionelle Hilfe in persönlicher Atmosphäre.</h2>
       <p>Ich möchte Sie in einer freundlichen, geschützten Atmosphäre empfangen, die zu Ihrem Wohlbefinden beiträgt — damit Sie befreit über das sprechen können, was Ihnen wichtig ist.</p>
