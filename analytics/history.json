@@ -1,0 +1,42 @@
+{
+  "config": {
+    "siteHostname": "nechus0.github.io",
+    "siteLabel": "Praxis Anja Rösick-Schulte",
+    "cfAccountId": "f2ebe7b029e50df96e3d90cfbcb025bd",
+    "cfSiteTag": "8b998fc005094371baf5507d47963803",
+    "overviewUrl": "https://dash.cloudflare.com/f2ebe7b029e50df96e3d90cfbcb025bd/web-analytics/overview/page-views?siteTag~in=8b998fc005094371baf5507d47963803&excludeBots=Yes",
+    "note": "To hand this off to another site/account: update the five fields above. Get siteTag + account id from the Cloudflare Web Analytics site URL. The dashboard design (template.html) stays unchanged."
+  },
+  "snapshots": [
+    {
+      "date": "2026-07-19",
+      "capturedAt": "2026-07-19T15:20:00+02:00",
+      "range": "last24h",
+      "pageViews": 12,
+      "visits": 10,
+      "loadTimeMs": 467,
+      "referers": [
+        {"name": "None (direct)", "count": 10},
+        {"name": "nechus0.github.io", "count": 2}
+      ],
+      "paths": [
+        {"name": "/psychotherapie-WHV/", "count": 10},
+        {"name": "/psychotherapie-WHV/index.html", "count": 1},
+        {"name": "/psychotherapie-WHV/impressum.html", "count": 1}
+      ],
+      "countries": [
+        {"name": "Germany", "count": 12}
+      ],
+      "browsers": [
+        {"name": "Chrome", "count": 7},
+        {"name": "MobileSafari", "count": 4},
+        {"name": "Safari", "count": 1}
+      ],
+      "devices": [
+        {"name": "Desktop", "count": 8},
+        {"name": "Mobile", "count": 4}
+      ],
+      "cwv": {"lcpP75Ms": 256, "lcpGoodPct": 100}
+    }
+  ]
+}
