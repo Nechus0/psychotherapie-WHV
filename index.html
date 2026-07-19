@@ -10,8 +10,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --paper:#FCFAF7;--sand:#F4F0E9;--sage:#5F7A67;--sage-dark:#4f6857;--sage-light:#E7EDE6;
-    --ink:#23241F;--ink-soft:#55564C;--muted:#6A6A5E;--faint:#9A968A;--line:#E7E2D6;--line-2:#D8D2C4;--dark:#2E3A32;
+    --paper:#FCFAF7;--sand:#F4F0E9;--sage:#4F6857;--sage-dark:#4f6857;--sage-light:#E7EDE6;
+    --cta:#3C5646;--cta-hover:#2F4638;
+    --ink:#23241F;--ink-soft:#55564C;--muted:#6A6A5E;--faint:#8E8A7C;--line:#E7E2D6;--line-2:#D8D2C4;--dark:#2E3A32;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
@@ -33,10 +34,12 @@
   .nav-links a:hover{color:var(--ink)}
   .btn{display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:1rem;padding:14px 26px;border-radius:9px;transition:.2s;cursor:pointer}
   .btn svg{width:15px;height:15px}
-  .btn-sage{background:var(--sage);color:#fff}
-  .btn-sage:hover{background:var(--sage-dark);transform:translateY(-2px)}
-  .btn-ghost{background:var(--paper);border:1px solid var(--line-2);color:var(--ink)}
-  .btn-ghost:hover{border-color:var(--ink)}
+  .btn-sage{background:var(--cta);color:#fff}
+  .btn-sage:hover{background:var(--cta-hover);transform:translateY(-2px)}
+  .phone-link{display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:1.02rem;color:var(--ink);padding:14px 4px;transition:color .2s}
+  .phone-link svg{width:17px;height:17px;color:var(--sage)}
+  .phone-link .num{border-bottom:2px solid var(--sage);padding-bottom:2px}
+  .phone-link:hover{color:var(--cta)}
   .burger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:6px;margin-right:-6px}
   .burger span{display:block;width:24px;height:2px;background:var(--ink);border-radius:2px;transition:.28s}
   .burger.active span:nth-child(1){transform:translateY(7px) rotate(45deg)}
@@ -80,8 +83,8 @@
   .kontakt .kbtns{display:flex;flex-wrap:wrap;gap:14px}
   .btn-light{background:#EDEFE9;color:var(--dark)}
   .btn-light:hover{transform:translateY(-2px)}
-  .btn-outline{border:1px solid rgba(237,239,233,.3);color:#EDEFE9}
-  .btn-outline:hover{border-color:#EDEFE9}
+  .btn-outline{border:1px solid rgba(237,239,233,.55);color:#EDEFE9}
+  .btn-outline:hover{border-color:#EDEFE9;background:rgba(237,239,233,.1)}
   .kontakt .cright{position:relative;background:var(--sand);min-height:360px}
   .kontakt .cright iframe{position:absolute;inset:0;width:100%;height:100%;border:0;display:block}
   .kontakt .infocard{position:absolute;left:24px;right:24px;bottom:24px;background:var(--paper);color:var(--ink);border-radius:12px;padding:22px 24px;display:grid;grid-template-columns:1fr 1fr;gap:16px 24px;box-shadow:0 18px 40px -20px rgba(0,0,0,.5)}
@@ -140,7 +143,10 @@
       <a href="#kontakt" class="btn btn-sage">Termin vereinbaren
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
       </a>
-      <a href="tel:+494421773288" class="btn btn-ghost">04421 773288</a>
+      <a href="tel:+494421773288" class="phone-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span class="num">04421 773288</span>
+      </a>
     </div>
   </div>
 </section>
@@ -150,7 +156,7 @@
     <div class="frame">
       <img src="Gemini_Generated_Image_1r6hp41r6hp41r6h.png" alt="Praxisräume — ruhiger, freundlicher Raum mit Blick in den Garten" onerror="this.style.display='none'">
     </div>
-    <div class="cap"><span>Die Praxis — ein ruhiger Ort zum Ankommen</span><span>An der Wurt 19 · Wilhelmshaven</span></div>
+    <div class="cap"><span>Die Praxis — ein ruhiger Ort zum Ankommen</span><span>An der Wurt 26 · Wilhelmshaven</span></div>
   </div>
 </div>
 
@@ -206,9 +212,9 @@
         </div>
       </div>
       <div class="cright">
-        <iframe title="Standort der Praxis — An der Wurt 19, 26389 Wilhelmshaven" src="https://maps.google.com/maps?q=An%20der%20Wurt%2019%2C%2026389%20Wilhelmshaven&z=15&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe title="Standort der Praxis — An der Wurt 26, 26389 Wilhelmshaven" src="https://maps.google.com/maps?q=An%20der%20Wurt%2026%2C%2026389%20Wilhelmshaven&z=15&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         <div class="infocard">
-          <div class="full"><div class="k">Praxis</div><div class="v">An der Wurt 19 · 26389 Wilhelmshaven</div></div>
+          <div class="full"><div class="k">Praxis</div><div class="v">An der Wurt 26 · 26389 Wilhelmshaven</div></div>
           <div><div class="k">Telefon</div><a class="v" href="tel:+494421773288">+49 4421 773288</a></div>
           <div><div class="k">Sprechzeiten</div><div class="v">Mo–Do, telefonisch</div></div>
         </div>
