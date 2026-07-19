@@ -84,6 +84,20 @@
   .coaching .point .mark{width:28px;height:2px;background:var(--sage);border-radius:2px;margin-bottom:14px}
   .coaching .point h4{font-size:1.14rem;margin-bottom:6px}
   .coaching .point p{font-size:1rem;line-height:1.6;color:var(--muted);max-width:44ch}
+  .formen{padding:0 0 8px}
+  .formen .grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  .formen .card{background:var(--sand);border-radius:14px;padding:32px 34px}
+  .formen .card h4{font-size:1.22rem;margin-bottom:10px}
+  .formen .card p{color:var(--ink-soft);font-size:1rem;line-height:1.65}
+  .kosten{padding:84px 0}
+  .kosten .erst{max-width:60ch;margin-bottom:40px}
+  .kosten .erst h4{font-size:1.22rem;margin-bottom:10px}
+  .kosten .erst p{color:var(--ink-soft);font-size:1.07rem;line-height:1.7}
+  .kosten .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .kosten .box{border:1px solid var(--line);border-radius:14px;padding:26px 28px}
+  .kosten .box .mark{width:28px;height:2px;background:var(--sage);border-radius:2px;margin-bottom:14px}
+  .kosten .box h4{font-size:1.08rem;margin-bottom:8px}
+  .kosten .box p{color:var(--muted);font-size:.98rem;line-height:1.6}
   .kontakt{padding:24px 0}
   .kontakt .card{border-radius:16px;overflow:hidden;background:var(--dark);color:#EDEFE9;display:grid;grid-template-columns:1.05fr .95fr}
   .kontakt .cleft{padding:56px}
@@ -104,15 +118,18 @@
   .kontakt .infocard a.v:hover{color:var(--sage)}
   footer{border-top:1px solid var(--line);margin-top:24px}
   footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;padding-top:28px;padding-bottom:28px;font-size:.88rem;color:var(--faint)}
+  footer a{color:var(--muted);text-decoration:underline;text-underline-offset:2px}
+  footer a:hover{color:var(--sage)}
   @media(max-width:900px){
     .wrap{padding:0 24px}
     .burger{display:flex}
     .nav-links{position:absolute;top:74px;left:0;right:0;background:var(--paper);border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:0;padding:6px 24px 18px;box-shadow:0 24px 40px -30px rgba(0,0,0,.35);transform:translateY(-10px);opacity:0;pointer-events:none;transition:.24s ease}
     .nav-links.open{transform:none;opacity:1;pointer-events:auto}
     .nav-links a{padding:15px 0;font-size:1.05rem;border-bottom:1px solid var(--line)}
-    .services,.about .wrap,.kontakt .card,.coaching .wrap{grid-template-columns:1fr}
+    .services,.about .wrap,.kontakt .card,.coaching .wrap,.formen .grid,.kosten .grid{grid-template-columns:1fr}
     .coaching .wrap{gap:14px}
     .coaching{padding:64px 0}
+    .kosten{padding:64px 0}
     .about .wrap{gap:34px}
     .about .ph{max-width:360px}
     .praxis .frame{aspect-ratio:4/3}
@@ -190,6 +207,21 @@
   </div>
 </section>
 
+<section class="formen reveal" data-reveal>
+  <div class="wrap">
+    <div class="grid">
+      <div class="card">
+        <h4>Einzeltherapie</h4>
+        <p>Im vertraulichen Gespräch erkennen wir die Ursachen Ihrer Konflikte, erarbeiten Bewältigungsstrategien und finden Ihre Position im Leben neu — in einem Rhythmus, der zu Ihnen passt.</p>
+      </div>
+      <div class="card">
+        <h4>Paartherapie</h4>
+        <p>Belastungen gemeinsam benennen, sich wieder als eigenständige Personen wahrnehmen und neue Wege zueinander finden. Wohin die Reise geht, bestimmen Sie.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="approach reveal" data-reveal>
   <div class="wrap">
     <p>Körper und Seele sind ein untrennbares Ganzes — und beeinflussen sich stets wechselseitig.</p>
@@ -229,6 +261,24 @@
   </div>
 </section>
 
+<section class="kosten reveal" data-reveal id="ablauf">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">Ablauf & Kosten</span>
+      <h2>Der Weg zu einem Termin</h2>
+    </div>
+    <div class="erst">
+      <h4>Das Erstgespräch</h4>
+      <p>Nach telefonischer Absprache treffen wir uns zu einem Erstgespräch. Wir lernen uns kennen, Sie schildern mir Ihr Anliegen und haben Zeit für Ihre Fragen — und ich gebe Ihnen eine erste Einschätzung, welches Vorgehen geeignet erscheint.</p>
+    </div>
+    <div class="grid">
+      <div class="box"><div class="mark"></div><h4>Private Krankenkassen</h4><p>Die Kosten einer Psychotherapie werden von Ihrer privaten Krankenkasse und Ihrer Beihilfe übernommen.</p></div>
+      <div class="box"><div class="mark"></div><h4>Gesetzliche Krankenkassen</h4><p>Eine Abrechnung mit gesetzlichen Krankenkassen ist in meiner Privatpraxis leider nicht möglich.</p></div>
+      <div class="box"><div class="mark"></div><h4>Selbstzahler</h4><p>Auf Basis der Gebührenordnung für Ärzte (GOÄ) oder nach individueller Absprache.</p></div>
+    </div>
+  </div>
+</section>
+
 <section class="kontakt reveal" data-reveal id="kontakt">
   <div class="wrap">
     <div class="card">
@@ -258,7 +308,7 @@
 <footer>
   <div class="wrap">
     <span>© 2026 Anja Rösick-Schulte — Psychotherapie & Psychosomatische Medizin</span>
-    <span>Impressum · Datenschutz</span>
+    <span><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></span>
   </div>
 </footer>
 
