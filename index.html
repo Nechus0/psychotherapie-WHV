@@ -74,6 +74,16 @@
   .about h3{font-size:clamp(1.9rem,3.4vw,2.2rem);margin-bottom:22px;line-height:1.15}
   .about p{font-size:1.07rem;line-height:1.7;color:var(--ink-soft);margin-bottom:16px}
   .about p:last-child{margin-bottom:0}
+  .coaching{padding:84px 0}
+  .coaching .wrap{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+  .coaching .eyebrow{display:block;margin-bottom:16px}
+  .coaching h3{font-size:clamp(1.9rem,3.4vw,2.2rem);margin-bottom:20px;max-width:15ch;line-height:1.15}
+  .coaching .lead{font-size:1.07rem;line-height:1.7;color:var(--ink-soft);margin-bottom:28px;max-width:46ch}
+  .coaching .points{display:grid;gap:0}
+  .coaching .point{padding:22px 0;border-top:1px solid var(--line)}
+  .coaching .point .mark{width:28px;height:2px;background:var(--sage);border-radius:2px;margin-bottom:14px}
+  .coaching .point h4{font-size:1.14rem;margin-bottom:6px}
+  .coaching .point p{font-size:1rem;line-height:1.6;color:var(--muted);max-width:44ch}
   .kontakt{padding:24px 0}
   .kontakt .card{border-radius:16px;overflow:hidden;background:var(--dark);color:#EDEFE9;display:grid;grid-template-columns:1.05fr .95fr}
   .kontakt .cleft{padding:56px}
@@ -100,7 +110,9 @@
     .nav-links{position:absolute;top:74px;left:0;right:0;background:var(--paper);border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:0;padding:6px 24px 18px;box-shadow:0 24px 40px -30px rgba(0,0,0,.35);transform:translateY(-10px);opacity:0;pointer-events:none;transition:.24s ease}
     .nav-links.open{transform:none;opacity:1;pointer-events:auto}
     .nav-links a{padding:15px 0;font-size:1.05rem;border-bottom:1px solid var(--line)}
-    .services,.about .wrap,.kontakt .card{grid-template-columns:1fr}
+    .services,.about .wrap,.kontakt .card,.coaching .wrap{grid-template-columns:1fr}
+    .coaching .wrap{gap:14px}
+    .coaching{padding:64px 0}
     .about .wrap{gap:34px}
     .about .ph{max-width:360px}
     .praxis .frame{aspect-ratio:4/3}
@@ -125,6 +137,7 @@
       <a href="#top" class="brand"><i></i>Anja Rösick-Schulte</a>
       <div class="nav-links" id="menu">
         <a href="#leistungen">Leistungen</a>
+        <a href="#coaching">Coaching</a>
         <a href="#ueber">Über mich</a>
         <a href="#kontakt">Kontakt</a>
       </div>
@@ -181,6 +194,25 @@
   <div class="wrap">
     <p>Körper und Seele sind ein untrennbares Ganzes — und beeinflussen sich stets wechselseitig.</p>
     <div class="attr">Der Ansatz meiner Praxis</div>
+  </div>
+</section>
+
+<section class="coaching reveal" data-reveal id="coaching">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">Für Führungskräfte</span>
+      <h3>Coaching für Führungskräfte</h3>
+      <p class="lead">Führungskräfte stehen täglich vor der Aufgabe, sich schnell und angemessen auf neue Situationen einzustellen. Eine gute Selbstwahrnehmung ist dabei die Grundlage — gerade unter Zeitdruck und Belastung. Gemeinsam entwickeln wir einen lösungsorientierten Prozess, der Ihre Selbstreflexion stärkt und noch nicht freigesetzte Potenziale entwickelt.</p>
+      <a href="#kontakt" class="btn btn-sage">Coaching anfragen
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+    <div class="points">
+      <div class="point"><div class="mark"></div><h4>Kommunikation & Konflikte</h4><p>Konstruktive Kommunikation, die auch in angespannten Situationen zu tragfähigen Lösungen führt.</p></div>
+      <div class="point"><div class="mark"></div><h4>Stress & Belastung</h4><p>Souveräner Umgang mit Zeitdruck, Arbeitsüberlastung und innerer Anspannung.</p></div>
+      <div class="point"><div class="mark"></div><h4>Zeitmanagement</h4><p>Prioritäten klar setzen — für die Arbeit und ein erfüllendes Privatleben.</p></div>
+      <div class="point"><div class="mark"></div><h4>Selbstreflexion & Potenzial</h4><p>Im Dialog eigene Stärken erkennen und ungenutzte Potenziale weiterentwickeln.</p></div>
+    </div>
   </div>
 </section>
 
