@@ -102,8 +102,8 @@
   .btn-light:hover{transform:translateY(-2px)}
   .btn-outline{border:1px solid rgba(237,239,233,.3);color:#EDEFE9}
   .btn-outline:hover{border-color:#EDEFE9}
-  .kontakt .cright{position:relative;background-image:repeating-linear-gradient(135deg,#33433a,#33433a 13px,#2b382f 13px,#2b382f 26px);min-height:360px}
-  .kontakt .maptag{position:absolute;top:16px;left:16px;font-family:ui-monospace,monospace;font-size:.75rem;color:#A9C0AC;background:var(--dark);padding:5px 9px;border-radius:5px}
+  .kontakt .cright{position:relative;background:var(--sand);min-height:360px}
+  .kontakt .cright iframe{position:absolute;inset:0;width:100%;height:100%;border:0;display:block}
   .kontakt .infocard{position:absolute;left:24px;right:24px;bottom:24px;background:var(--paper);color:var(--ink);border-radius:12px;padding:22px 24px;display:grid;grid-template-columns:1fr 1fr;gap:16px 24px;box-shadow:0 18px 40px -20px rgba(0,0,0,.5)}
   .kontakt .infocard .full{grid-column:1 / -1}
   .kontakt .infocard .k{font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--faint);font-weight:600;margin-bottom:4px}
@@ -125,14 +125,15 @@
     .about .ph{max-width:360px}
     .praxis .frame{aspect-ratio:4/3}
     .kontakt .cleft{padding:40px 30px}
-    .kontakt .cright{min-height:300px}
+    .kontakt .cright{min-height:340px}
     .hero{padding:64px 0 48px}
     .leistungen,.about{padding:64px 0}
     .approach{padding:72px 0}
   }
   @media(max-width:520px){
-    .kontakt .infocard{grid-template-columns:1fr;position:static;margin:20px;left:auto;right:auto;bottom:auto}
-    .kontakt .cright{min-height:220px}
+    .kontakt .cright{min-height:0}
+    .kontakt .cright iframe{position:relative;height:240px}
+    .kontakt .infocard{grid-template-columns:1fr;position:static;margin:16px;left:auto;right:auto;bottom:auto}
   }
 </style>
 </head>
@@ -223,6 +224,189 @@
   <div class="wrap">
     <div class="ph"><img src="cache_2417833534.jpg" alt="Anja Rösick-Schulte" onerror="this.style.display='none'"></div>
     <div>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anja Rösick-Schulte — Praxis für Psychotherapie und Psychosomatische Medizin · Wilhelmshaven</title>
+<meta name="description" content="Praxis für Psychotherapie und Psychosomatische Medizin in Wilhelmshaven. Professionelle, einfühlsame Hilfe bei Depression, Burn-out, Ängsten, Psychosomatik und mehr.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#FCFAF7;--sand:#F4F0E9;--sage:#5F7A67;--sage-dark:#4f6857;--sage-light:#E7EDE6;
+    --ink:#23241F;--ink-soft:#55564C;--muted:#6A6A5E;--faint:#9A968A;--line:#E7E2D6;--line-2:#D8D2C4;--dark:#2E3A32;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Hanken Grotesk',system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.65;-webkit-font-smoothing:antialiased;font-size:17px}
+  h1,h2,h3,h4{font-weight:600;letter-spacing:-.02em;line-height:1.15}
+  a{text-decoration:none;color:inherit}
+  img{display:block;max-width:100%}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 56px}
+  .eyebrow{font-size:.82rem;letter-spacing:.16em;text-transform:uppercase;color:var(--sage);font-weight:600}
+  .reveal{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease}
+  .reveal.in{opacity:1;transform:none}
+  @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+  header{position:sticky;top:0;z-index:40;background:rgba(252,250,247,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  nav{display:flex;align-items:center;justify-content:space-between;height:74px}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:600;font-size:1.13rem;letter-spacing:-.01em}
+  .brand i{width:9px;height:9px;border-radius:50%;background:var(--sage);display:inline-block}
+  .nav-links{display:flex;align-items:center;gap:34px}
+  .nav-links a{font-size:.98rem;color:var(--muted);font-weight:500;transition:color .2s}
+  .nav-links a:hover{color:var(--ink)}
+  .btn{display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:1rem;padding:14px 26px;border-radius:9px;transition:.2s;cursor:pointer}
+  .btn svg{width:15px;height:15px}
+  .btn-sage{background:var(--sage);color:#fff}
+  .btn-sage:hover{background:var(--sage-dark);transform:translateY(-2px)}
+  .btn-ghost{background:var(--paper);border:1px solid var(--line-2);color:var(--ink)}
+  .btn-ghost:hover{border-color:var(--ink)}
+  .burger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:6px;margin-right:-6px}
+  .burger span{display:block;width:24px;height:2px;background:var(--ink);border-radius:2px;transition:.28s}
+  .burger.active span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .burger.active span:nth-child(2){opacity:0}
+  .burger.active span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+  .hero{padding:88px 0 56px}
+  .hero .eyebrow{display:block;margin-bottom:22px}
+  .hero h1{font-size:clamp(2.5rem,5.4vw,3.75rem);max-width:15ch;margin-bottom:26px;font-weight:600}
+  .hero p{font-size:1.2rem;line-height:1.6;color:var(--ink-soft);max-width:52ch;margin-bottom:34px}
+  .hero-cta{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+  .praxis{padding:20px 0 8px}
+  .praxis .frame{border-radius:16px;overflow:hidden;background:var(--sand);aspect-ratio:16/7}
+  .praxis .frame img{width:100%;height:100%;object-fit:cover;object-position:center 42%}
+  .praxis .cap{display:flex;justify-content:space-between;margin-top:14px;font-size:.88rem;color:var(--faint);flex-wrap:wrap;gap:6px}
+  .leistungen{padding:84px 0}
+  .head{max-width:640px;margin-bottom:44px}
+  .head .eyebrow{display:block;margin-bottom:16px}
+  .head h2{font-size:clamp(1.9rem,3.6vw,2.4rem)}
+  .services{display:grid;grid-template-columns:1fr 1fr;gap:0 72px}
+  .service{padding:30px 0;border-top:1px solid var(--line)}
+  .service .mark{width:28px;height:2px;background:var(--sage);border-radius:2px;margin-bottom:16px}
+  .service h4{font-size:1.22rem;margin-bottom:8px}
+  .service p{font-size:1rem;line-height:1.6;color:var(--muted);max-width:42ch}
+  .approach{background:var(--sand);text-align:center;padding:92px 0}
+  .approach p{margin:0 auto;max-width:22ch;font-weight:500;font-size:clamp(1.7rem,3.6vw,2.15rem);letter-spacing:-.01em;line-height:1.3;color:#2c2d26}
+  .approach .attr{margin-top:26px;font-size:.82rem;letter-spacing:.16em;text-transform:uppercase;color:var(--faint);font-weight:600}
+  .about{padding:84px 0}
+  .about .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:60px;align-items:center}
+  .about .ph{aspect-ratio:4/5;border-radius:14px;overflow:hidden;background:#fff}
+  .about .ph img{width:100%;height:100%;object-fit:contain;object-position:center}
+  .about .eyebrow{display:block;margin-bottom:16px}
+  .about h3{font-size:clamp(1.9rem,3.4vw,2.2rem);margin-bottom:22px;line-height:1.15}
+  .about p{font-size:1.07rem;line-height:1.7;color:var(--ink-soft);margin-bottom:16px}
+  .about p:last-child{margin-bottom:0}
+  .kontakt{padding:24px 0}
+  .kontakt .card{border-radius:16px;overflow:hidden;background:var(--dark);color:#EDEFE9;display:grid;grid-template-columns:1.05fr .95fr}
+  .kontakt .cleft{padding:56px}
+  .kontakt .eyebrow{display:block;color:#A9C0AC;margin-bottom:18px}
+  .kontakt h3{font-size:clamp(1.9rem,3.4vw,2.2rem);margin-bottom:16px;line-height:1.2;max-width:18ch}
+  .kontakt .lead{font-size:1.07rem;line-height:1.65;color:#C3CCBF;max-width:40ch;margin-bottom:32px}
+  .kontakt .kbtns{display:flex;flex-wrap:wrap;gap:14px}
+  .btn-light{background:#EDEFE9;color:var(--dark)}
+  .btn-light:hover{transform:translateY(-2px)}
+  .btn-outline{border:1px solid rgba(237,239,233,.3);color:#EDEFE9}
+  .btn-outline:hover{border-color:#EDEFE9}
+  .kontakt .cright{position:relative;background:var(--sand);min-height:360px}
+  .kontakt .cright iframe{position:absolute;inset:0;width:100%;height:100%;border:0;display:block}
+  .kontakt .infocard{position:absolute;left:24px;right:24px;bottom:24px;background:var(--paper);color:var(--ink);border-radius:12px;padding:22px 24px;display:grid;grid-template-columns:1fr 1fr;gap:16px 24px;box-shadow:0 18px 40px -20px rgba(0,0,0,.5)}
+  .kontakt .infocard .full{grid-column:1 / -1}
+  .kontakt .infocard .k{font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--faint);font-weight:600;margin-bottom:4px}
+  .kontakt .infocard .v{font-size:1rem}
+  .kontakt .infocard a.v:hover{color:var(--sage)}
+  footer{border-top:1px solid var(--line);margin-top:24px}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;padding-top:28px;padding-bottom:28px;font-size:.88rem;color:var(--faint)}
+  @media(max-width:900px){
+    .wrap{padding:0 24px}
+    .burger{display:flex}
+    .nav-links{position:absolute;top:74px;left:0;right:0;background:var(--paper);border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:0;padding:6px 24px 18px;box-shadow:0 24px 40px -30px rgba(0,0,0,.35);transform:translateY(-10px);opacity:0;pointer-events:none;transition:.24s ease}
+    .nav-links.open{transform:none;opacity:1;pointer-events:auto}
+    .nav-links a{padding:15px 0;font-size:1.05rem;border-bottom:1px solid var(--line)}
+    .services,.about .wrap,.kontakt .card{grid-template-columns:1fr}
+    .about .wrap{gap:34px}
+    .about .ph{max-width:360px}
+    .praxis .frame{aspect-ratio:4/3}
+    .kontakt .cleft{padding:40px 30px}
+    .kontakt .cright{min-height:340px}
+    .hero{padding:64px 0 48px}
+    .leistungen,.about{padding:64px 0}
+    .approach{padding:72px 0}
+  }
+  @media(max-width:520px){
+    .kontakt .cright{min-height:0}
+    .kontakt .cright iframe{position:relative;height:240px}
+    .kontakt .infocard{grid-template-columns:1fr;position:static;margin:16px;left:auto;right:auto;bottom:auto}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <nav>
+      <a href="#top" class="brand"><i></i>Anja Rösick-Schulte</a>
+      <div class="nav-links" id="menu">
+        <a href="#leistungen">Leistungen</a>
+        <a href="#ueber">Über mich</a>
+        <a href="#kontakt">Kontakt</a>
+      </div>
+      <button class="burger" id="burger" aria-label="Menü öffnen" aria-expanded="false"><span></span><span></span><span></span></button>
+    </nav>
+  </div>
+</header>
+<a id="top"></a>
+
+<section class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Psychotherapie & Psychosomatische Medizin · Wilhelmshaven</span>
+    <h1>Raum für das, was Sie bewegt.</h1>
+    <p>Als Psychotherapeutin gehe ich individuell auf Ihre Sorgen ein und finde gemeinsam mit Ihnen eine Lösung — auf dem Weg aus Krisen und schweren Lebenssituationen.</p>
+    <div class="hero-cta">
+      <a href="#kontakt" class="btn btn-sage">Termin vereinbaren
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <a href="tel:+494421773288" class="btn btn-ghost">04421 773288</a>
+    </div>
+  </div>
+</section>
+
+<div class="praxis">
+  <div class="wrap">
+    <div class="frame">
+      <img src="Gemini_Generated_Image_1r6hp41r6hp41r6h.png" alt="Praxisräume — ruhiger, freundlicher Raum mit Blick in den Garten" onerror="this.style.display='none'">
+    </div>
+    <div class="cap"><span>Die Praxis — ein ruhiger Ort zum Ankommen</span><span>An der Wurt 19 · Wilhelmshaven</span></div>
+  </div>
+</div>
+
+<section class="leistungen reveal" data-reveal id="leistungen">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">Behandlungsspektrum</span>
+      <h2>Wobei ich Sie begleite</h2>
+    </div>
+    <div class="services">
+      <div class="service"><div class="mark"></div><h4>Depression & Burn-out</h4><p>Begleitung aus anhaltender Niedergeschlagenheit, Antriebslosigkeit und Erschöpfung.</p></div>
+      <div class="service"><div class="mark"></div><h4>Ängste & Panik</h4><p>Ängste, Panikattacken und Zwänge verstehen und wieder Sicherheit gewinnen.</p></div>
+      <div class="service"><div class="mark"></div><h4>Psychosomatik</h4><p>Körperliche Beschwerden, die eng mit der Seele verbunden sind — ärztlich fundiert.</p></div>
+      <div class="service"><div class="mark"></div><h4>Chronische Schmerzen</h4><p>Migräne, Kopfschmerzen, Nackenverspannungen, Tinnitus und weitere Syndrome.</p></div>
+      <div class="service"><div class="mark"></div><h4>Krisen & Trauer</h4><p>Halt in persönlichen Krisen, bei Trauerreaktionen und in der Krankheitsverarbeitung.</p></div>
+      <div class="service"><div class="mark"></div><h4>Weitere Beschwerden</h4><p>Essstörungen, Schlafstörungen sowie die Begleitung bei Krebserkrankungen.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="approach reveal" data-reveal>
+  <div class="wrap">
+    <p>Körper und Seele sind ein untrennbares Ganzes — und beeinflussen sich stets wechselseitig.</p>
+    <div class="attr">Der Ansatz meiner Praxis</div>
+  </div>
+</section>
+
+<section class="about reveal" data-reveal id="ueber">
+  <div class="wrap">
+    <div class="ph"><img src="cache_2417833534.jpg" alt="Anja Rösick-Schulte" onerror="this.style.display='none'"></div>
+    <div>
       <span class="eyebrow">Über mich</span>
       <h3>Professionelle Hilfe in persönlicher Atmosphäre.</h3>
       <p>Ich möchte Sie in einer freundlichen, geschützten Atmosphäre empfangen, die zu Ihrem Wohlbefinden beiträgt — damit Sie befreit über das sprechen können, was Ihnen wichtig ist.</p>
@@ -247,7 +431,7 @@
         </div>
       </div>
       <div class="cright">
-        <span class="maptag">Kartenausschnitt / Anfahrt</span>
+        <iframe title="Standort der Praxis — An der Wurt 19, 26389 Wilhelmshaven" src="https://maps.google.com/maps?q=An%20der%20Wurt%2019%2C%2026389%20Wilhelmshaven&z=15&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         <div class="infocard">
           <div class="full"><div class="k">Praxis</div><div class="v">An der Wurt 19 · 26389 Wilhelmshaven</div></div>
           <div><div class="k">Telefon</div><a class="v" href="tel:+494421773288">+49 4421 773288</a></div>
