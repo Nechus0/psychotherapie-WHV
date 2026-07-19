@@ -10,33 +10,65 @@
   "snapshots": [
     {
       "date": "2026-07-19",
-      "capturedAt": "2026-07-19T15:20:00+02:00",
+      "capturedAt": "2026-07-19T14:00:09.188Z",
       "range": "last24h",
-      "pageViews": 12,
-      "visits": 10,
-      "loadTimeMs": 467,
+      "pageViews": 15,
+      "visits": 13,
+      "loadTimeMs": null,
       "referers": [
-        {"name": "None (direct)", "count": 10},
-        {"name": "nechus0.github.io", "count": 2}
+        {
+          "name": "None (direct)",
+          "count": 13
+        },
+        {
+          "name": "nechus0.github.io",
+          "count": 2
+        }
       ],
       "paths": [
-        {"name": "/psychotherapie-WHV/", "count": 10},
-        {"name": "/psychotherapie-WHV/index.html", "count": 1},
-        {"name": "/psychotherapie-WHV/impressum.html", "count": 1}
+        {
+          "name": "/psychotherapie-WHV/",
+          "count": 13
+        },
+        {
+          "name": "/psychotherapie-WHV/index.html",
+          "count": 1
+        },
+        {
+          "name": "/psychotherapie-WHV/impressum.html",
+          "count": 1
+        }
       ],
       "countries": [
-        {"name": "Germany", "count": 12}
+        {
+          "name": "DE",
+          "count": 15
+        }
       ],
       "browsers": [
-        {"name": "Chrome", "count": 7},
-        {"name": "MobileSafari", "count": 4},
-        {"name": "Safari", "count": 1}
+        {
+          "name": "Chrome",
+          "count": 8
+        },
+        {
+          "name": "MobileSafari",
+          "count": 4
+        },
+        {
+          "name": "Safari",
+          "count": 3
+        }
       ],
       "devices": [
-        {"name": "Desktop", "count": 8},
-        {"name": "Mobile", "count": 4}
-      ],
-      "cwv": {"lcpP75Ms": 256, "lcpGoodPct": 100}
+        {
+          "name": "desktop",
+          "count": 11
+        },
+        {
+          "name": "mobile",
+          "count": 4
+        }
+      ]
     }
   ]
 }
