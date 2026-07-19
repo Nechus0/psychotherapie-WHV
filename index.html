@@ -132,6 +132,11 @@
   .btn-outline:hover{border-color:#EDEFE9;background:rgba(237,239,233,.1)}
   .kontakt .cright{position:relative;background:var(--sand);min-height:360px}
   .kontakt .cright iframe{position:absolute;inset:0;width:100%;height:100%;border:0;display:block}
+  .map-ph{position:absolute;inset:0;width:100%;height:100%;border:0;background:var(--sand);cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;padding:26px;text-align:center;color:var(--ink);font-family:inherit;transition:background .2s}
+  .map-ph:hover{background:#ece5d7}
+  .map-ph svg{width:32px;height:32px;color:var(--sage)}
+  .map-ph .mpt{font-weight:600;font-size:1.05rem}
+  .map-ph .mps{font-size:.8rem;color:var(--muted);max-width:30ch;line-height:1.5}
   .kontakt .infocard{position:absolute;left:24px;right:24px;bottom:24px;background:var(--paper);color:var(--ink);border-radius:12px;padding:22px 24px;display:grid;grid-template-columns:1fr 1fr;gap:16px 24px;box-shadow:0 18px 40px -20px rgba(0,0,0,.5)}
   .kontakt .infocard .full{grid-column:1 / -1}
   .kontakt .infocard .k{font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--faint);font-weight:600;margin-bottom:4px}
@@ -162,7 +167,7 @@
   }
   @media(max-width:520px){
     .kontakt .cright{min-height:0}
-    .kontakt .cright iframe{position:relative;height:240px}
+    .kontakt .cright iframe,.kontakt .cright .map-ph{position:relative;height:240px}
     .kontakt .infocard{grid-template-columns:1fr;position:static;margin:16px;left:auto;right:auto;bottom:auto}
   }
 </style>
@@ -338,7 +343,11 @@
         </div>
       </div>
       <div class="cright">
-        <iframe title="Standort der Praxis — An der Wurt 26, 26389 Wilhelmshaven" src="https://maps.google.com/maps?q=An%20der%20Wurt%2026%2C%2026389%20Wilhelmshaven&z=15&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <button type="button" class="map-ph" id="mapLoad" aria-label="Karte von Google Maps laden">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span class="mpt">Karte anzeigen</span>
+          <span class="mps">Beim Laden werden Daten an Google Maps übertragen.</span>
+        </button>
         <div class="infocard">
           <div class="full"><div class="k">Praxis</div><div class="v">An der Wurt 26 · 26389 Wilhelmshaven</div></div>
           <div><div class="k">Telefon</div><a class="v" href="tel:+494421773288">+49 4421 773288</a></div>
@@ -363,6 +372,16 @@
   menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>setOpen(false)));
   const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.08,rootMargin:'0px 0px -40px 0px'});
   document.querySelectorAll('[data-reveal]').forEach(el=>io.observe(el));
+
+  // Karte erst auf Klick laden (verhindert Auto-Scroll & schützt die Privatsphäre)
+  var mapBtn=document.getElementById('mapLoad');
+  if(mapBtn){mapBtn.addEventListener('click',function(){
+    var f=document.createElement('iframe');
+    f.title='Standort der Praxis — An der Wurt 26, 26389 Wilhelmshaven';
+    f.loading='lazy';f.referrerPolicy='no-referrer-when-downgrade';
+    f.src='https://maps.google.com/maps?q=An%20der%20Wurt%2026%2C%2026389%20Wilhelmshaven&z=15&output=embed';
+    mapBtn.replaceWith(f);
+  });}
 </script>
 
 <!-- Cloudflare Web Analytics · cookielos/DSGVO-freundlich -->
