@@ -123,6 +123,19 @@
           "count": 12
         }
       ]
+    },
+    {
+      "date": "2026-07-21",
+      "capturedAt": "2026-07-21T12:11:14.734Z",
+      "range": "last24h",
+      "pageViews": 0,
+      "visits": 0,
+      "loadTimeMs": null,
+      "referers": [],
+      "paths": [],
+      "countries": [],
+      "browsers": [],
+      "devices": []
     }
   ]
 }
