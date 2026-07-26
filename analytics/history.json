@@ -217,6 +217,19 @@
           "count": 2
         }
       ]
+    },
+    {
+      "date": "2026-07-26",
+      "capturedAt": "2026-07-26T11:37:13.147Z",
+      "range": "last24h",
+      "pageViews": 0,
+      "visits": 0,
+      "loadTimeMs": null,
+      "referers": [],
+      "paths": [],
+      "countries": [],
+      "browsers": [],
+      "devices": []
     }
   ]
 }
