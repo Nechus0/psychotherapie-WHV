@@ -256,6 +256,56 @@
       "countries": [],
       "browsers": [],
       "devices": []
+    },
+    {
+      "date": "2026-07-29",
+      "capturedAt": "2026-07-29T13:12:46.033Z",
+      "range": "last24h",
+      "pageViews": 5,
+      "visits": 4,
+      "loadTimeMs": null,
+      "referers": [
+        {
+          "name": "None (direct)",
+          "count": 4
+        },
+        {
+          "name": "nechus0.github.io",
+          "count": 1
+        }
+      ],
+      "paths": [
+        {
+          "name": "/psychotherapie-WHV/",
+          "count": 4
+        },
+        {
+          "name": "/psychotherapie-WHV/impressum.html",
+          "count": 1
+        }
+      ],
+      "countries": [
+        {
+          "name": "DE",
+          "count": 5
+        }
+      ],
+      "browsers": [
+        {
+          "name": "Safari",
+          "count": 3
+        },
+        {
+          "name": "Chrome",
+          "count": 2
+        }
+      ],
+      "devices": [
+        {
+          "name": "desktop",
+          "count": 5
+        }
+      ]
     }
   ]
 }
