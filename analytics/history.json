@@ -306,6 +306,19 @@
           "count": 5
         }
       ]
+    },
+    {
+      "date": "2026-07-30",
+      "capturedAt": "2026-07-30T12:15:20.665Z",
+      "range": "last24h",
+      "pageViews": 0,
+      "visits": 0,
+      "loadTimeMs": null,
+      "referers": [],
+      "paths": [],
+      "countries": [],
+      "browsers": [],
+      "devices": []
     }
   ]
 }
