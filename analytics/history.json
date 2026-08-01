@@ -357,6 +357,44 @@
           "count": 1
         }
       ]
+    },
+    {
+      "date": "2026-08-01",
+      "capturedAt": "2026-08-01T11:12:24.981Z",
+      "range": "last24h",
+      "pageViews": 1,
+      "visits": 1,
+      "loadTimeMs": null,
+      "referers": [
+        {
+          "name": "None (direct)",
+          "count": 1
+        }
+      ],
+      "paths": [
+        {
+          "name": "/psychotherapie-WHV/",
+          "count": 1
+        }
+      ],
+      "countries": [
+        {
+          "name": "DE",
+          "count": 1
+        }
+      ],
+      "browsers": [
+        {
+          "name": "Chrome",
+          "count": 1
+        }
+      ],
+      "devices": [
+        {
+          "name": "desktop",
+          "count": 1
+        }
+      ]
     }
   ]
 }
