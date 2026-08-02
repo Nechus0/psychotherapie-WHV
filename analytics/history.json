@@ -395,6 +395,19 @@
           "count": 1
         }
       ]
+    },
+    {
+      "date": "2026-08-02",
+      "capturedAt": "2026-08-02T11:08:25.507Z",
+      "range": "last24h",
+      "pageViews": 0,
+      "visits": 0,
+      "loadTimeMs": null,
+      "referers": [],
+      "paths": [],
+      "countries": [],
+      "browsers": [],
+      "devices": []
     }
   ]
 }
