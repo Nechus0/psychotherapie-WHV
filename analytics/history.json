@@ -485,6 +485,19 @@
           "count": 1
         }
       ]
+    },
+    {
+      "date": "2026-08-07",
+      "capturedAt": "2026-08-07T07:52:30.586Z",
+      "range": "last24h",
+      "pageViews": 0,
+      "visits": 0,
+      "loadTimeMs": null,
+      "referers": [],
+      "paths": [],
+      "countries": [],
+      "browsers": [],
+      "devices": []
     }
   ]
 }
