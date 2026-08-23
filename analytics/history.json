@@ -718,6 +718,19 @@
       "countries": [],
       "browsers": [],
       "devices": []
+    },
+    {
+      "date": "2026-08-23",
+      "capturedAt": "2026-08-23T07:11:03.662Z",
+      "range": "last24h",
+      "pageViews": 0,
+      "visits": 0,
+      "loadTimeMs": null,
+      "referers": [],
+      "paths": [],
+      "countries": [],
+      "browsers": [],
+      "devices": []
     }
   ]
 }
