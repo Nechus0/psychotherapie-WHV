@@ -1823,6 +1823,19 @@
       "countries": [],
       "browsers": [],
       "devices": []
+    },
+    {
+      "date": "2026-11-16",
+      "capturedAt": "2026-11-16T16:16:32.695Z",
+      "range": "last24h",
+      "pageViews": 0,
+      "visits": 0,
+      "loadTimeMs": null,
+      "referers": [],
+      "paths": [],
+      "countries": [],
+      "browsers": [],
+      "devices": []
     }
   ]
 }
