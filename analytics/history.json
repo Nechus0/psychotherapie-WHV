@@ -1888,6 +1888,19 @@
       "countries": [],
       "browsers": [],
       "devices": []
+    },
+    {
+      "date": "2026-11-21",
+      "capturedAt": "2026-11-21T14:51:58.574Z",
+      "range": "last24h",
+      "pageViews": 0,
+      "visits": 0,
+      "loadTimeMs": null,
+      "referers": [],
+      "paths": [],
+      "countries": [],
+      "browsers": [],
+      "devices": []
     }
   ]
 }
